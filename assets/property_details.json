@@ -1,0 +1,814 @@
+{
+    "type": "scaffold",
+    "args": {
+        "backgroundColor": "#FFFFFF",
+        "body": {
+            "type": "safe_area",
+            "args": {
+                "child": {
+                    "type": "single_child_scroll_view",
+                    "args": {
+                        "child": {
+                            "type": "padding",
+                            "args": {
+                                "padding": [
+                                    16,
+                                    16,
+                                    16,
+                                    16
+                                ],
+                                "child": {
+                                    "type": "column",
+                                    "args": {
+                                        "crossAxisAlignment": "start",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "args": {
+                                                    "text": "Hello",
+                                                    "style": {
+                                                        "fontSize": 16,
+                                                        "fontWeight": "w400",
+                                                        "color": "#70777F"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "args": {
+                                                    "text": "John Due 👋",
+                                                    "style": {
+                                                        "fontSize": 18,
+                                                        "fontWeight": "w700",
+                                                        "color": "#000000"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "sized_box",
+                                                "args": {
+                                                    "height": 16
+                                                }
+                                            },
+                                            {
+                                                "type": "container",
+                                                "args": {
+                                                    "padding": [
+                                                        16,
+                                                        16,
+                                                        16,
+                                                        16
+                                                    ],
+                                                    "decoration": {
+                                                        "type": "box_decoration",
+                                                        "color": "#F5F5F5",
+                                                        "borderRadius": {
+                                                            "type": "all",
+                                                            "radius": 12
+                                                        }
+                                                    },
+                                                    "child": {
+                                                        "type": "row",
+                                                        "args": {
+                                                            "mainAxisAlignment": "spaceBetween",
+                                                            "children": [
+                                                                {
+                                                                    "type": "column",
+                                                                    "args": {
+                                                                        "crossAxisAlignment": "start",
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "text",
+                                                                                "args": {
+                                                                                    "text": "Brande name",
+                                                                                    "style": {
+                                                                                        "fontSize": 12,
+                                                                                        "color": "#70777F"
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "text",
+                                                                                "args": {
+                                                                                    "text": "Urjavidhi",
+                                                                                    "style": {
+                                                                                        "fontSize": 14,
+                                                                                        "fontWeight": "w600"
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "container",
+                                                                    "args": {
+                                                                        "width": 40,
+                                                                        "height": 40,
+                                                                        "decoration": {
+                                                                            "type": "box_decoration",
+                                                                            "shape": "circle",
+                                                                            "color": "#E0E0E0"
+                                                                        },
+                                                                        "alignment": "center",
+                                                                        "child": {
+                                                                            "type": "text",
+                                                                            "args": {
+                                                                                "text": "0%",
+                                                                                "style": {
+                                                                                    "fontSize": 12,
+                                                                                    "fontWeight": "w500"
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "sized_box",
+                                                "args": {
+                                                    "height": 24
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "args": {
+                                                    "text": "Follow these steps to make your property live",
+                                                    "style": {
+                                                        "fontSize": 14,
+                                                        "fontWeight": "w500"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "sized_box",
+                                                "args": {
+                                                    "height": 16
+                                                }
+                                            },
+                                            {
+                                                "type": "column",
+                                                "args": {
+                                                    "mainAxisAlignment": "start",
+                                                    "crossAxisAlignment": "start",
+                                                    "children": [
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    16,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#0038FF",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "01",
+                                                                                            "style": {
+                                                                                                "color": "#0038FF",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add basic details",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w600"
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "sized_box",
+                                                                                                    "args": {
+                                                                                                        "height": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "container",
+                                                                                                    "args": {
+                                                                                                        "width": 80,
+                                                                                                        "height": 36,
+                                                                                                        "decoration": {
+                                                                                                            "type": "box_decoration",
+                                                                                                            "color": "#0038FF",
+                                                                                                            "borderRadius": 8
+                                                                                                        },
+                                                                                                        "alignment": "center",
+                                                                                                        "child": {
+                                                                                                            "type": "text",
+                                                                                                            "args": {
+                                                                                                                "text": "Add",
+                                                                                                                "style": {
+                                                                                                                    "color": "#FFFFFF",
+                                                                                                                    "fontWeight": "w600"
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 50,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "02",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add tenant details",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 30,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "03",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add room Features",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 30,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "04",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add your room",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 30,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "05",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add agreement details",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 30,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "06",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add rent details",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "height": 30,
+                                                                "width": 2,
+                                                                "margin": [
+                                                                    16,
+                                                                    8,
+                                                                    0,
+                                                                    8
+                                                                ],
+                                                                "color": "#A1AEBE"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "#FFFFFF",
+                                                                                        "border": {
+                                                                                            "color": "#A1AEBE",
+                                                                                            "width": 2
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "07",
+                                                                                            "style": {
+                                                                                                "color": "#242E39",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 16
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "column",
+                                                                                        "args": {
+                                                                                            "crossAxisAlignment": "start",
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Add other charge details",
+                                                                                                        "style": {
+                                                                                                            "fontWeight": "w500",
+                                                                                                            "fontSize":16,
+                                                                                                            "color":"#70777F"
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                                
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

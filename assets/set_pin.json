@@ -1,0 +1,169 @@
+{
+  "type": "scaffold",
+  "args": {
+    "backgroundColor": "#ffffff",
+    "body": {
+      "type": "padding",
+      "args": {
+        "padding": [
+          24,
+          100,
+          24,
+          24
+        ],
+        "child": {
+          "type": "form",
+          "args": {
+            "formKey": "pinFormKey",
+            "child": {
+              "type": "column",
+              "args": {
+                "mainAxisSize": "min",
+                "crossAxisAlignment": "center",
+                "children": [
+                  {
+                    "type": "text",
+                    "args": {
+                      "text": "Set a pin",
+                      "style": {
+                        "fontSize": 24,
+                        "fontWeight": "w600",
+                        "color": "#2E3849",
+                        "fontFamily": "Poppins"
+                      }
+                    }
+                  },
+                  {
+                    "type": "sized_box",
+                    "args": {
+                      "height": 16
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "args": {
+                      "text": "Your PIN is stored securely on-device only—we never sync sensitive data to protect your privacy.",
+                      "textAlign": "center",
+                      "style": {
+                        "fontSize": 14,
+                        "color": "#70777F",
+                        "fontWeight": "w400",
+                        "fontFamily": "Poppins"
+                      }
+                    }
+                  },
+                  {
+                    "type": "sized_box",
+                    "args": {
+                      "height": 32
+                    }
+                  },
+                  {
+                    "type": "column",
+                    "args": {
+                      "children": [
+                        {
+                          "type": "directionality",
+                          "args": {
+                            "textDirection": "ltr",
+                            "child": {
+                              "type": "pin_input",
+                              "id": "pin",
+                              "outputs": [
+                                {
+                                  "name": "value"
+                                }
+                              ],
+                              "args": {
+                                "length": 4,
+                                "onChanged": "${onChangedValue()}",
+                                "cursor": {
+                                  "type": "column",
+                                  "args": {
+                                    "mainAxisAlignment": "end",
+                                    "children": [
+                                      {
+                                        "type": "container",
+                                        "args": {
+                                          "width": 1,
+                                          "height": 22,
+                                          "margin": [
+                                            0,
+                                            0,
+                                            0,
+                                            9
+                                          ],
+                                          "color": "#0E1980"
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "type": "sized_box",
+                    "args": {
+                      "height": 32
+                    }
+                  },
+                  {
+                    "type": "container",
+                    "args": {
+                      "width": "infinity",
+                      "height": 48,
+                      "decoration": {
+                        "gradient": {
+                          "type": "linear",
+                          "colors": [
+                            "#561BF3",
+                            "#0E1980"
+                          ],
+                          "begin": "centerLeft",
+                          "end": "centerRight"
+                        },
+                        "borderRadius": {
+                          "type": "all",
+                          "radius": 12
+                        }
+                      },
+                      "child": {
+                        "type": "gesture_detector",
+                        "args": {
+                          "onTap": "${confirmPin()}",
+                          "child": {
+                            "type": "center",
+                            "args": {
+                              "child": {
+                                "type": "text",
+                                "args": {
+                                  "text": "Confirm Pin",
+                                  "style": {
+                                    "color": "#FFFFFF",
+                                    "fontSize": 16,
+                                    "fontWeight": "w600",
+                                    "fontFamily": "Poppins",
+                                    "letterSpacing": 1
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

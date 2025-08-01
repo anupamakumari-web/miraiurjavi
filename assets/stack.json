@@ -1,0 +1,435 @@
+{
+    "type": "scaffold",
+    "args": {
+        "backgroundColor": "#fff",
+        "body": {
+            "type": "stack",
+            "args": {
+                "children": [
+                    {
+                        "type": "animated_container",
+                        "args": {
+                            "height": 500,
+                            "width": "infinity",
+                            "duration": 300,
+                            "child": {
+                                "type": "asset_image",
+                                "args": {
+                                    "fit": "cover",
+                                    "name": "assets/mirai-login-background.jpg"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "type": "align",
+                        "args": {
+                            "alignment": "bottomCenter",
+                            "child": {
+                                "type": "form",
+                                "args": {
+                                    "child": {
+                                        "type": "single_child_scroll_view",
+                                        "args": {
+                                            "child": {
+                                                "type": "padding",
+                                                "args": {
+                                                    "padding": [
+                                                        24,
+                                                        24,
+                                                        40,
+                                                        40
+                                                    ],
+                                                    "child": {
+                                                        "type": "column",
+                                                        "args": {
+                                                            "mainAxisSize": "min",
+                                                            "children": [
+                                                                {
+                                                                    "type": "asset_image",
+                                                                    "args": {
+                                                                        "name": "assets/Mirai-logo.jpg",
+                                                                        "height": 60
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "sized_box",
+                                                                    "args": {
+                                                                        "height": 16
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "text",
+                                                                    "args": {
+                                                                        "text": "Let's Get Started!",
+                                                                        "style": {
+                                                                            "fontSize": 30,
+                                                                            "fontWeight": "w600",
+                                                                            "color": "#2E3849",
+                                                                            "fontfamily": "Poppins"
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "sized_box",
+                                                                    "args": {
+                                                                        "height": 24
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "align",
+                                                                    "args": {
+                                                                        "alignment": "centerLeft",
+                                                                        "child": {
+                                                                            "type": "text",
+                                                                            "args": {
+                                                                                "text": "Enter Mobile Number",
+                                                                                "style": {
+                                                                                    "fontSize": 14,
+                                                                                    "color": "#2E3849",
+                                                                                    "fontWeight": "w400",
+                                                                                    "letterSpacing": 1
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "sized_box",
+                                                                    "args": {
+                                                                        "height": 11
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "padding": [
+                                                                                        8,
+                                                                                        12,
+                                                                                        8,
+                                                                                        12
+                                                                                    ],
+                                                                                    "decoration": {
+                                                                                        "color": "fff",
+                                                                                        "borderRadius": {
+                                                                                            "type": "all",
+                                                                                            "radius": 10
+                                                                                        },
+                                                                                        "border": {
+                                                                                            "type": "all",
+                                                                                            "color": "#BABABA",
+                                                                                            "width": 1
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "row",
+                                                                                        "args": {
+                                                                                            "children": [
+                                                                                                {
+                                                                                                    "type": "asset_image",
+                                                                                                    "args": {
+                                                                                                        "name": "assets/india.png",
+                                                                                                        "height": 25
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "sized_box",
+                                                                                                    "args": {
+                                                                                                        "width": 6
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "+91",
+                                                                                                        "style": {
+                                                                                                            "color": "#757575",
+                                                                                                            "fontSize": 14,
+                                                                                                            "letterSpacing": 1,
+                                                                                                            "fontWeight": "w400",
+                                                                                                            "fontfamily": "poppins"
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "icon",
+                                                                                                    "args": {
+                                                                                                        "icon": {
+                                                                                                            "codePoint": 57496,
+                                                                                                            "fontFamily": "MaterialIcons",
+                                                                                                            "size": 24
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "sized_box",
+                                                                                "args": {
+                                                                                    "width": 10
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "flexible",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "mobile",
+                                                                                        "args": {
+                                                                                            "keyboardType": "phone",
+                                                                                            "decoration": {
+                                                                                                "hintText": "Enter your number",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#757575"
+                                                                                                },
+                                                                                                "suffixIcon": {
+                                                                                                    "type": "icon_button",
+                                                                                                    "args": {
+                                                                                                        "icon": {
+                                                                                                            "type": "icon",
+                                                                                                            "args": {
+                                                                                                                "icon": {
+                                                                                                                    "codePoint": 57704,
+                                                                                                                    "fontFamily": "MaterialIcons",
+                                                                                                                    "size": 24
+                                                                                                                }
+                                                                                                            }
+                                                                                                        },
+                                                                                                        "onPressed": "${set_value('mobile','')}"
+                                                                                                    }
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 10
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BABABA",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 10
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BABABA",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 10
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BABABA",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 10
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "validators": [
+                                                                                                {
+                                                                                                    "type": "required"
+                                                                                                },
+                                                                                                {
+                                                                                                    "type": "phone_number"
+                                                                                                }
+                                                                                            ],
+                                                                                            "style": {
+                                                                                                "fontSize": 14,
+                                                                                                "fontWeight": "w400",
+                                                                                                "color": "#707070"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "sized_box",
+                                                                    "args": {
+                                                                        "height": 16
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "mainAxisSize": "min",
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "checkbox",
+                                                                                "args": {
+                                                                                    "label": "OnChanged example",
+                                                                                    "onChanged": "${setBooleanValue('changedValue')}",
+                                                                                    "visualDensity": "compact",
+                                                                                    "activeColor": "#561BF3",
+                                                                                    "side": {
+                                                                                        "type": "borderSide",
+                                                                                        "color": "#BABABA",
+                                                                                        "width": 1
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "rich_text",
+                                                                                        "args": {
+                                                                                            "text": {
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "text": "By signing up, you agree to ",
+                                                                                                        "style": {
+                                                                                                            "fontSize": 12,
+                                                                                                            "color": "#70777F",
+                                                                                                            "fontFamily": "Poppins"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "style": {
+                                                                                                            "fontSize": 12,
+                                                                                                            "color": "#70777F",
+                                                                                                            "decoration": "underline",
+                                                                                                            "decorationColor": "#70777F",
+                                                                                                            "decorationThickness": 1.5,
+                                                                                                            "fontfamily": "Poppins"
+                                                                                                        },
+                                                                                                        "text": "T&C"
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "text": " and ",
+                                                                                                        "style": {
+                                                                                                            "fontSize": 12,
+                                                                                                            "fontfamily": "Poppins",
+                                                                                                            "color": "#70777F"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "text": "Privacy Policy",
+                                                                                                        "style": {
+                                                                                                            "fontSize": 12,
+                                                                                                            "color": "#70777F",
+                                                                                                            "fontfamily": "Poppins",
+                                                                                                            "decoration": "underline",
+                                                                                                            "decorationColor": "#70777F",
+                                                                                                            "decorationThickness": 1.5
+                                                                                                        }
+                                                                                                    }
+                                                                                                ],
+                                                                                                "style": {
+                                                                                                    "color": "#70777F",
+                                                                                                    "fontSize": 12
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "sized_box",
+                                                                    "args": {
+                                                                        "height": 20
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "container",
+                                                                    "args": {
+                                                                        "width": "infinity",
+                                                                        "height": 48,
+                                                                        "decoration": {
+                                                                            "gradient": {
+                                                                                "type": "linear",
+                                                                                "colors": [
+                                                                                    "#561BF3",
+                                                                                    "#0E1980"
+                                                                                ],
+                                                                                "begin": "centerLeft",
+                                                                                "end": "centerRight"
+                                                                            },
+                                                                            "borderRadius": {
+                                                                                "type": "all",
+                                                                                "radius": 12
+                                                                            }
+                                                                        },
+                                                                        "child": {
+                                                                            "type": "save_context",
+                                                                            "args": {
+                                                                                "key": "form_context",
+                                                                                "child": {
+                                                                                    "type": "gesture_detector",
+                                                                                    "args": {
+                                                                                        "onTap": "${submit('form_context')}",
+                                                                                        "behavior": "opaque",
+                                                                                        "child": {
+                                                                                            "type": "center",
+                                                                                            "args": {
+                                                                                                "key": "form_context",
+                                                                                                "child": {
+                                                                                                    "type": "text",
+                                                                                                    "args": {
+                                                                                                        "text": "Submit",
+                                                                                                        "style": {
+                                                                                                            "color": "#FFFFFF",
+                                                                                                            "fontSize": 16,
+                                                                                                            "fontWeight": "w600",
+                                                                                                            "fontfamily": "Poppins",
+                                                                                                            "letterSpacing": 1
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,969 @@
+{
+    "type": "scaffold",
+    "args": {
+        "backgroundColor": "#FFFFFF",
+        "body": {
+            "type": "safe_area",
+            "args": {
+                "top": true,
+                "child": {
+                    "type": "stack",
+                    "args": {
+                        "children": [
+                            {
+                                "type": "single_child_scroll_view",
+                                "args": {
+                                    "child": {
+                                        "type": "padding",
+                                        "args": {
+                                            "padding": [
+                                                20,
+                                                32,
+                                                20,
+                                                95
+                                            ],
+                                            "child": {
+                                                "type": "column",
+                                                "args": {
+                                                    "crossAxisAlignment": "start",
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "args": {
+                                                                "text": "Welcome to mirai  🎉",
+                                                                "style": {
+                                                                    "fontSize": 24,
+                                                                    "fontWeight": "w700",
+                                                                    "color": "#2E3849"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sized_box",
+                                                            "args": {
+                                                                "height": 8
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "args": {
+                                                                "text": "Please tell us little bit about you",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#70777F"
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "container",
+                                                            "args": {
+                                                                "padding": [
+                                                                    0,
+                                                                    25,
+                                                                    0,
+                                                                    10
+                                                                ],
+                                                                "child": {
+                                                                    "type": "row",
+                                                                    "args": {
+                                                                        "mainAxisAlignment": "spaceBetween",
+                                                                        "crossAxisAlignment": "center",
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "${currentStep == 0 ? 'fff' : '#34C759'}",
+                                                                                        "border": {
+                                                                                            "color": "${currentStep == 0 ? '#0038FF' : '#34c759'}",
+                                                                                            "width": 2.0
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "01",
+                                                                                            "style": {
+                                                                                                "color": "${currentStep == 0 ? '#0038FF' : 'fff'}",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "expanded",
+                                                                                "args": {
+                                                                                    "child": {
+                                                                                        "type": "container",
+                                                                                        "args": {
+                                                                                            "height": 2,
+                                                                                            "color": "${currentStep == 0 ? '#A1AEBE' : '#0162DD'}"
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "container",
+                                                                                "args": {
+                                                                                    "width": 32,
+                                                                                    "height": 32,
+                                                                                    "alignment": "center",
+                                                                                    "decoration": {
+                                                                                        "type": "box_decoration",
+                                                                                        "shape": "circle",
+                                                                                        "color": "fff",
+                                                                                        "border": {
+                                                                                            "color": "${currentStep == 0 ? '#A1AEBE' : '#0162DD'}",
+                                                                                            "width": 2.0
+                                                                                        }
+                                                                                    },
+                                                                                    "child": {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "02",
+                                                                                            "style": {
+                                                                                                "color": "${currentStep == 0 ? '#242E39' : '#0162DD'}",
+                                                                                                "fontWeight": "w500"
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "visibility",
+                                                            "args": {
+                                                                "visible": "${currentStep == 0}",
+                                                                "child": {
+                                                                    "type": "padding",
+                                                                    "args": {
+                                                                        "padding": [
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            10
+                                                                        ],
+                                                                        "child": {
+                                                                            "type": "column",
+                                                                            "args": {
+                                                                                "crossAxisAlignment": "start",
+                                                                                "children": [
+                                                                                    {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "Personal Details",
+                                                                                            "style": {
+                                                                                                "fontSize": 20,
+                                                                                                "fontWeight": "w700",
+                                                                                                "color": "#2E3849",
+                                                                                                "fontfamily": "Poppins"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "Your Name",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "your_name",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Enter your name",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "Brand Name",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "brand_name",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Enter your brands name",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 24
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "Business Size",
+                                                                                            "style": {
+                                                                                                "fontSize": 17,
+                                                                                                "fontWeight": "w600",
+                                                                                                "color": "#0C1421"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "Total Units",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "total_units",
+                                                                                        "args": {
+                                                                                            "keyboardType": "number",
+                                                                                            "decoration": {
+                                                                                                "hintText": "Enter total units",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "Total Properties",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "total_properties",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Enter total properties",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 24
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "Where do you operate?",
+                                                                                            "style": {
+                                                                                                "fontSize": 17,
+                                                                                                "fontWeight": "w600",
+                                                                                                "color": "#0C1421"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "City",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "dropdown_button_form_field",
+                                                                                        "id": "city",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Select City",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "items": [
+                                                                                                "New York",
+                                                                                                "Los Angeles",
+                                                                                                "Chicago"
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 24
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "What's your preferred language?",
+                                                                                            "style": {
+                                                                                                "fontSize": 17,
+                                                                                                "fontWeight": "w600",
+                                                                                                "color": "#0C1421"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "align",
+                                                                                        "args": {
+                                                                                            "alignment": "centerLeft",
+                                                                                            "child": {
+                                                                                                "type": "text",
+                                                                                                "args": {
+                                                                                                    "text": "Language",
+                                                                                                    "style": {
+                                                                                                        "fontSize": 14,
+                                                                                                        "color": "#70777F",
+                                                                                                        "fontWeight": "w400",
+                                                                                                        "letterSpacing": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 8
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "dropdown_button_form_field",
+                                                                                        "id": "language",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Select Language",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            },
+                                                                                            "items": [
+                                                                                                "English",
+                                                                                                "Hindi",
+                                                                                                "French"
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "visibility",
+                                                            "args": {
+                                                                "visible": "${currentStep == 1}",
+                                                                "child": {
+                                                                    "type": "padding",
+                                                                    "args": {
+                                                                        "padding": [
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            10
+                                                                        ],
+                                                                        "child": {
+                                                                            "type": "column",
+                                                                            "args": {
+                                                                                "crossAxisAlignment": "start",
+                                                                                "children": [
+                                                                                    {
+                                                                                        "type": "text",
+                                                                                        "args": {
+                                                                                            "text": "Referral code",
+                                                                                            "style": {
+                                                                                                "fontSize": 20,
+                                                                                                "fontWeight": "w600",
+                                                                                                "color": "#2E3849"
+                                                                                            }
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "sized_box",
+                                                                                        "args": {
+                                                                                            "height": 16
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "text_form_field",
+                                                                                        "id": "referral_code",
+                                                                                        "args": {
+                                                                                            "decoration": {
+                                                                                                "hintText": "Referral code (optional)",
+                                                                                                "hintStyle": {
+                                                                                                    "fontSize": 14,
+                                                                                                    "letterSpacing": 1,
+                                                                                                    "fontWeight": "w400",
+                                                                                                    "color": "#BBBBBB"
+                                                                                                },
+                                                                                                "border": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "enabledBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#BBBBBB",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "focusedBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#0038FF",
+                                                                                                        "width": 1.0
+                                                                                                    },
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    }
+                                                                                                },
+                                                                                                "errorBorder": {
+                                                                                                    "type": "outline",
+                                                                                                    "borderRadius": {
+                                                                                                        "type": "all",
+                                                                                                        "radius": 8
+                                                                                                    },
+                                                                                                    "borderSide": {
+                                                                                                        "color": "#FF0000",
+                                                                                                        "width": 1
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "type": "align",
+                                "args": {
+                                    "alignment": "bottomCenter",
+                                    "child": {
+                                        "type": "padding",
+                                        "args": {
+                                            "padding": [
+                                                24,
+                                                24,
+                                                40,
+                                                40
+                                            ],
+                                            "child": {
+                                                "type": "container",
+                                                "args": {
+                                                    "width": "infinity",
+                                                    "height": 48,
+                                                    "decoration": {
+                                                        "type": "BoxDecoration",
+                                                        "gradient": {
+                                                            "type": "linear",
+                                                            "colors": [
+                                                                "#561BF3",
+                                                                "#0E1980"
+                                                            ],
+                                                            "begin": "centerLeft",
+                                                            "end": "centerRight"
+                                                        },
+                                                        "borderRadius": {
+                                                            "type": "all",
+                                                            "radius": 12
+                                                        }
+                                                    },
+                                                    "child": {
+                                                        "type": "text_button",
+                                                        "args": {
+                                                            "onPressed": "${currentStep == 0 ? nextStep() : submitForm()}",
+                                                            "style": {
+                                                                "type": "ButtonStyle",
+                                                                "backgroundColor": {
+                                                                    "type": "materialStateProperty",
+                                                                    "value": {
+                                                                        "resolved": "transparent"
+                                                                    }
+                                                                },
+                                                                "padding": {
+                                                                    "type": "materialStateProperty",
+                                                                    "value": {
+                                                                        "resolved": {
+                                                                            "type": "edgeInsets",
+                                                                            "left": 0,
+                                                                            "right": 0,
+                                                                            "top": 0,
+                                                                            "bottom": 0
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            "child": {
+                                                                "type": "text",
+                                                                "args": {
+                                                                    "text": "${currentStep == 0 ? 'Continue' : 'Begin your journey'}",
+                                                                    "style": {
+                                                                        "color": "#FFFFFF",
+                                                                        "fontSize": 16,
+                                                                        "fontWeight": "w600"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
