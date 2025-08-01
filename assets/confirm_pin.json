@@ -50,190 +50,44 @@
                     }
                   },
                   {
-                    "type": "row",
+                    "type": "column",
                     "args": {
-                      "mainAxisAlignment": "center",
                       "children": [
                         {
-                          "type": "container",
+                          "type": "directionality",
                           "args": {
-                            "width": 50,
-                            "height": 50,
+                            "textDirection": "ltr",
                             "child": {
-                              "type": "center",
-                              "args": {
-                                "child": {
-                                  "type": "text_form_field",
-                                  "id": "pin1",
-                                  "args": {
-                                    "textAlign": "center",
-                                    "maxLength": 1,
-                                    "keyboardType": "number",
-                                    "style": {
-                                      "fontSize": 18,
-                                      "fontWeight": "w600",
-                                      "color": "#2E3849",
-                                      "fontFamily": "Poppins"
-                                    },
-                                    "decoration": {
-                                      "counterText": "",
-                                      "border": {
-                                        "type": "outline",
-                                        "borderRadius": {
-                                          "type": "all",
-                                          "radius": 10
-                                        },
-                                        "borderSide": {
-                                          "type": "all",
-                                          "color": "#BABABA",
-                                          "width": 1.0
-                                        }
-                                      }
-                                    }
-                                  }
+                              "type": "pin_input",
+                              "id": "pin",
+                              "outputs": [
+                                {
+                                  "name": "value"
                                 }
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "type": "sized_box",
-                          "args": {
-                            "width": 16
-                          }
-                        },
-                        {
-                          "type": "container",
-                          "args": {
-                            "width": 50,
-                            "height": 50,
-                            "child": {
-                              "type": "center",
+                              ],
                               "args": {
-                                "child": {
-                                  "type": "text_form_field",
-                                  "id": "pin2",
+                                "length": 4,
+                                "onChanged": "${onChangedValue()}",
+                                "cursor": {
+                                  "type": "column",
                                   "args": {
-                                    "textAlign": "center",
-                                    "maxLength": 1,
-                                    "keyboardType": "number",
-                                    "style": {
-                                      "fontSize": 18,
-                                      "fontWeight": "w600",
-                                      "color": "#2E3849",
-                                      "fontFamily": "Poppins"
-                                    },
-                                    "decoration": {
-                                      "counterText": "",
-                                      "border": {
-                                        "type": "outline",
-                                        "borderRadius": {
-                                          "type": "all",
-                                          "radius": 10
-                                        },
-                                        "borderSide": {
-                                          "type": "all",
-                                          "color": "#BABABA",
-                                          "width": 1.0
+                                    "mainAxisAlignment": "end",
+                                    "children": [
+                                      {
+                                        "type": "container",
+                                        "args": {
+                                          "width": 1,
+                                          "height": 22,
+                                          "margin": [
+                                            0,
+                                            0,
+                                            0,
+                                            9
+                                          ],
+                                          "color": "#0E1980"
                                         }
                                       }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "type": "sized_box",
-                          "args": {
-                            "width": 16
-                          }
-                        },
-                        {
-                          "type": "container",
-                          "args": {
-                            "width": 50,
-                            "height": 50,
-                            "child": {
-                              "type": "center",
-                              "args": {
-                                "child": {
-                                  "type": "text_form_field",
-                                  "id": "pin3",
-                                  "args": {
-                                    "textAlign": "center",
-                                    "maxLength": 1,
-                                    "keyboardType": "number",
-                                    "style": {
-                                      "fontSize": 18,
-                                      "fontWeight": "w600",
-                                      "color": "#2E3849",
-                                      "fontFamily": "Poppins"
-                                    },
-                                    "decoration": {
-                                      "counterText": "",
-                                      "border": {
-                                        "type": "outline",
-                                        "borderRadius": {
-                                          "type": "all",
-                                          "radius": 10
-                                        },
-                                        "borderSide": {
-                                          "type": "all",
-                                          "color": "#BABABA",
-                                          "width": 1.0
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        },
-                        {
-                          "type": "sized_box",
-                          "args": {
-                            "width": 16
-                          }
-                        },
-                        {
-                          "type": "container",
-                          "args": {
-                            "width": 50,
-                            "height": 50,
-                            "child": {
-                              "type": "center",
-                              "args": {
-                                "child": {
-                                  "type": "text_form_field",
-                                  "id": "pin4",
-                                  "args": {
-                                    "textAlign": "center",
-                                    "maxLength": 1,
-                                    "keyboardType": "number",
-                                    "style": {
-                                      "fontSize": 18,
-                                      "fontWeight": "w600",
-                                      "color": "#2E3849",
-                                      "fontFamily": "Poppins"
-                                    },
-                                    "decoration": {
-                                      "counterText": "",
-                                      "border": {
-                                        "type": "outline",
-                                        "borderRadius": {
-                                          "type": "all",
-                                          "radius": 10
-                                        },
-                                        "borderSide": {
-                                          "type": "all",
-                                          "color": "#BABABA",
-                                          "width": 1.0
-                                        }
-                                      }
-                                    }
+                                    ]
                                   }
                                 }
                               }

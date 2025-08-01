@@ -1,6 +1,7 @@
-import 'dart:convert';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
-import 'package:miraiurjavi_app/custom%20widgets/pin_input_builder.dart';
+import 'package:miraiurjavi_app/Utils/dynamic_json_references.dart';
+import 'package:miraiurjavi_app/custom%20builder/pin_input_builder.dart';
 
 final registry = JsonWidgetRegistry.instance;
 
@@ -13,11 +14,14 @@ class SetPinScreen extends StatefulWidget {
 
 class _DynamicFormScreenState extends State<SetPinScreen> {
   JsonWidgetData? widgetData;
+  Map<String, dynamic>? json;
+  bool loading = true;
+  String? error;
 
   @override
   void initState() {
     super.initState();
-    _loadJson();
+    loadJsonFromFirebase();
     _registerCustomFunction();
   }
 
@@ -28,28 +32,6 @@ class _DynamicFormScreenState extends State<SetPinScreen> {
       ),
     });
     registry.registerFunctions(<String, JsonWidgetFunction>{
-      // 'updateOtp': ({args, required registry}) => () {
-      //   final value = args![0]['value'] as String? ?? '';
-      //   registry.setValue('otp_value', value);
-      //   final values = registry.values;
-
-      //   final phone = registry.getValue('phone_input');
-      //   final termsAccepted = registry.getValue('terms_checkbox');
-
-      //   debugPrint('📞 Phone: $phone');
-      //   debugPrint('✅ Terms Accepted: $termsAccepted');
-
-      //   // ❗Validate manually since there's no automatic formState validate
-      //   if ((phone?.toString().isEmpty ?? true)) {
-      //     debugPrint("❌ Phone is required");
-      //     return;
-      //   }
-
-      //   if (termsAccepted != true) {
-      //     debugPrint("❌ You must accept terms");
-      //     return;
-      //   }
-      // },
       'confirmPin': ({args, required registry}) => () {
         final otpValue = registry.getValue("pin_value");
         print("Entered OTP: $otpValue");
@@ -63,13 +45,57 @@ class _DynamicFormScreenState extends State<SetPinScreen> {
     });
   }
 
-  Future<void> _loadJson() async {
-    // final formKey = GlobalKey<FormState>();
-    // registry.setValue('form_context', formKey);
-
-    final layoutStr = await rootBundle.loadString('assets/set_pin.json');
+  Future<void> loadJsonFromFirebase() async {
+    //for local json
+    /*final layoutStr = await rootBundle.loadString('assets/set_pin.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
+
+    setState(() {
+      widgetData = data;
+    });*/
+
+    try {
+      final docRef = FirebaseFirestore.instance
+          .collection('sdui_schemas')
+          .doc('authentication')
+          .collection('screens')
+          .doc('set_pin')
+          .collection('widgets')
+          .doc('scaffold');
+      final snapshot = await docRef.get();
+
+      if (snapshot.exists) {
+        final data = snapshot.data();
+        print("Fetched: $data");
+      } else {
+        print("No data found");
+      }
+      final baseJson = snapshot.data();
+      if (baseJson == null) {
+        throw Exception("❌ Firestore JSON for scaffold not found");
+      }
+
+      final resolved = await resolveDynamicJsonReferences(
+        input: baseJson,
+        module: 'authentication',
+        screen: 'set_pin',
+      );
+      setState(() {
+        json = resolved;
+        loading = false;
+      });
+      _loadJson();
+    } catch (e) {
+      setState(() {
+        error = e.toString();
+        loading = false;
+      });
+    }
+  }
+
+  Future<void> _loadJson() async {
+    final data = JsonWidgetData.fromDynamic(json, registry: registry);
 
     setState(() {
       widgetData = data;

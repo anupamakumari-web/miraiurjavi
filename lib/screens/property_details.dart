@@ -22,22 +22,14 @@ class _DynamicFormScreenState extends State<PropertyDetailsScreen> {
 
   void _registerCustomFunction() {
     registry.registerFunctions(<String, JsonWidgetFunction>{
-      
-      'confirmPin': ({args, required registry}) => () {
-        Navigator.of(context).pushNamed('/confirmPin');
-      },
-      
-      
     });
-
-   
   }
 
   Future<void> _loadJson() async {
-    // final formKey = GlobalKey<FormState>();
-    // registry.setValue('form_context', formKey);
-
-    final layoutStr = await rootBundle.loadString('assets/property_details.json');
+    //for local json --working on it
+    final layoutStr = await rootBundle.loadString(
+      'assets/property_details.json',
+    );
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
 

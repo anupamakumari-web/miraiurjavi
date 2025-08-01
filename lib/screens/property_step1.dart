@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
-import 'package:miraiurjavi_app/custom%20widgets/circle_avatar_builder.dart';
+import 'package:miraiurjavi_app/custom%20builder/circle_avatar_builder.dart';
 
 final registry = JsonWidgetRegistry.instance;
 
@@ -55,9 +55,7 @@ class _DynamicFormScreenState extends State<PropertyStep1Screen> {
   }
 
   Future<void> _loadJson() async {
-    // final formKey = GlobalKey<FormState>();
-    // registry.setValue('form_context', formKey);
-
+    //for local json --working on it
     final layoutStr = await rootBundle.loadString('assets/property_step1.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);

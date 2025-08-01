@@ -17,7 +17,7 @@ class _DynamicFormScreenState extends State<PersonalDetailScreen> {
   void initState() {
     super.initState();
     _registerCustomFunction();
-    registry.setValue('currentStep', 0); // 👈 this line is required
+    registry.setValue('currentStep', 0);
     _loadJson();
   }
 
@@ -41,7 +41,6 @@ class _DynamicFormScreenState extends State<PersonalDetailScreen> {
         setState(() {});
         
 
-        // Process form submission
         debugPrint(
           'Submitting form: $name, $brand, $units, $properties, $city',
         );
@@ -59,9 +58,7 @@ class _DynamicFormScreenState extends State<PersonalDetailScreen> {
   }
 
   Future<void> _loadJson() async {
-    // final formKey = GlobalKey<FormState>();
-    // registry.setValue('form_context', formKey);
-
+    //for local json --not uploaded in firebase
     final layoutStr = await rootBundle.loadString(
       'assets/personal_details.json',
     );

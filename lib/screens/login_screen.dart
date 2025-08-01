@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart';
@@ -15,55 +14,15 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   JsonWidgetData? widgetData;
-  Map<String, dynamic>? jsons;
+  Map<String, dynamic>? json;
   bool loading = true;
   String? error;
 
   @override
   void initState() {
     super.initState();
-    _loadJson();
+    loadJsonFromFirebase();
     _registerCustomFunction();
-  }
-
-  Future<void> loadJsonFromFirebase() async {
-    try {
-      final docRef = FirebaseFirestore.instance
-          .collection('sdui_schemas')
-          .doc('authentication')
-          .collection('screens')
-          .doc('signin')
-          .collection('widgets')
-          .doc('scaffold');
-      final snapshot = await docRef.get();
-
-      if (snapshot.exists) {
-        final data = snapshot.data();
-        print("Fetched: $data");
-      } else {
-        print("No data found");
-      }
-      final baseJson = snapshot.data();
-      if (baseJson == null) {
-        throw Exception("❌ Firestore JSON for scaffold not found");
-      }
-
-      final resolved = await resolveDynamicJsonReferences(
-        input: baseJson,
-        module: 'authentication',
-        screen: 'signin',
-      );
-      setState(() {
-        jsons = resolved;
-        loading = false;
-      });
-      _loadJson();
-    } catch (e) {
-      setState(() {
-        error = e.toString();
-        loading = false;
-      });
-    }
   }
 
   void _registerCustomFunction() {
@@ -117,57 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
           final variableName = args![0];
           registry.setValue(variableName, onChangedValue);
         };
-      },
-      'verifyOtp': ({args, required registry}) => () {
-        var message = 'This is a simple print message';
-        if (args?.isEmpty == false) {
-          for (var arg in args!) {
-            message += ' $arg';
-          }
-        }
-        // ignore: avoid_print
-        print(message);
-      },
-      'resendOtp': ({args, required registry}) => () {
-        var message = 'This is a simple print message';
-        if (args?.isEmpty == false) {
-          for (var arg in args!) {
-            message += ' $arg';
-          }
-        }
-        // ignore: avoid_print
-        print(message);
-      },
-      'confirmPin': ({args, required registry}) => () {
-        var message = 'This is a simple print message';
-        if (args?.isEmpty == false) {
-          for (var arg in args!) {
-            message += ' $arg';
-          }
-        }
-        // ignore: avoid_print
-        print(message);
-      },
-      'confirm': ({args, required registry}) => () {
-        var message = 'This is a simple print message';
-        if (args?.isEmpty == false) {
-          for (var arg in args!) {
-            message += ' $arg';
-          }
-        }
-        // ignore: avoid_print
-        print(message);
-      },
-      'verifyPin': ({args, required registry}) => () {
-        var message = 'This is a simple print message';
-        if (args?.isEmpty == false) {
-          for (var arg in args!) {
-            message += ' $arg';
-          }
-        }
-        // ignore: avoid_print
-        print(message);
-      },
+      }
     });
 
     /*registry.registerFunctions(<String, JsonWidgetFunction>{
@@ -255,10 +164,57 @@ class _LoginScreenState extends State<LoginScreen> {
     });*/
   }
 
-  Future<void> _loadJson() async {
-    final layoutStr = await rootBundle.loadString('assets/stack.json');
+  Future<void> loadJsonFromFirebase() async {
+    //for local json
+    /*final layoutStr = await rootBundle.loadString('assets/signin.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
+
+    setState(() {
+      widgetData = data;
+    });
+    */
+    try {
+      final docRef = FirebaseFirestore.instance
+          .collection('sdui_schemas')
+          .doc('authentication')
+          .collection('screens')
+          .doc('signin')
+          .collection('widgets')
+          .doc('scaffold');
+      final snapshot = await docRef.get();
+
+      if (snapshot.exists) {
+        final data = snapshot.data();
+        print("Fetched: $data");
+      } else {
+        print("No data found");
+      }
+      final baseJson = snapshot.data();
+      if (baseJson == null) {
+        throw Exception("❌ Firestore JSON for scaffold not found");
+      }
+
+      final resolved = await resolveDynamicJsonReferences(
+        input: baseJson,
+        module: 'authentication',
+        screen: 'signin',
+      );
+      setState(() {
+        json = resolved;
+        loading = false;
+      });
+      _loadJson();
+    } catch (e) {
+      setState(() {
+        error = e.toString();
+        loading = false;
+      });
+    }
+  }
+
+  Future<void> _loadJson() async {
+    final data = JsonWidgetData.fromDynamic(json, registry: registry);
 
     setState(() {
       widgetData = data;
