@@ -5,7 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:miraiurjavi_app/actions/pinchange_action_parse.dart';
 import 'package:miraiurjavi_app/actions/pincomplete_action_parse.dart';
-import 'package:miraiurjavi_app/actions/submit_form_action_parse.dart';
+import 'package:miraiurjavi_app/actions/signin_submitform_action_parse.dart';
 import 'package:miraiurjavi_app/custom%20stac%20widget/country_code_picker_parse.dart';
 import 'package:miraiurjavi_app/custom%20stac%20widget/custom_pinput_parse.dart';
 import 'package:stac/stac.dart';
@@ -33,7 +33,7 @@ void main() async {
     ],
     actionParsers: [
       PinChangeActionParser(),
-      SubmitFormActionParser(),
+      SigninSubmitFormActionParser(),
       PinCompleteActionParser(),
     ],
   );
