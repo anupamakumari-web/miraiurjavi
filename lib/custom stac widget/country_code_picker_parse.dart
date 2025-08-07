@@ -2,7 +2,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:stac/stac.dart';
 
-import 'country_code_picker.dart';
+import '../model/country_code_picker.dart';
 
 // Custom country code Parser
 class CustomCountryPickerParser extends StacParser<CustomCountryPicker> {

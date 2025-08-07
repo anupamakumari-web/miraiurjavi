@@ -1,0 +1,153 @@
+{
+    "type": "scaffold",
+    "backgroundColor": "#FFFFFF",
+    "body": {
+        "type": "padding",
+        "padding": {
+            "left": 24,
+            "right": 24,
+            "top": 100,
+            "bottom": 24
+        },
+        "child": {
+            "type": "form",
+            "autovalidateMode": "always",
+            "child": {
+                "type": "column",
+                "mainAxisSize": "min",
+                "crossAxisAlignment": "center",
+                "children": [
+                    {
+                        "type": "text",
+                        "data": "Set a pin",
+                        "style": {
+                            "fontSize": 24,
+                            "fontWeight": "w600",
+                            "color": "#2E3849",
+                            "fontFamily": "Poppins"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 16
+                    },
+                    {
+                        "type": "text",
+                        "data": "Your PIN is stored securely on-device only—we never sync sensitive data to protect your privacy.",
+                        "textAlign": "center",
+                        "style": {
+                            "fontSize": 14,
+                            "color": "#70777F",
+                            "fontWeight": "w400",
+                            "fontFamily": "Poppins"
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 32
+                    },
+                    {
+                        "type": "pinput",
+                        "length": 4,
+                        "id": "pinId",
+                        "obscureText": true,
+                        "hint": "Enter your PIN",
+                        "onChanged": "pinChange",
+                        "onCompleted": "handlePinCompleted",
+                        "validator": "validatePin",
+                        "theme": {
+                            "defaultPinTheme": {
+                                "backgroundColor": "#F5F5F5",
+                                "borderColor": "#CCCCCC",
+                                "borderWidth": "1.5",
+                                "borderRadius": "12"
+                            },
+                            "focusedPinTheme": {
+                                "backgroundColor": "#E3F2FD",
+                                "borderColor": "#2196F3",
+                                "borderWidth": "2",
+                                "borderRadius": "12"
+                            },
+                            "submittedPinTheme": {
+                                "backgroundColor": "#E8F5E8",
+                                "borderColor": "#4CAF50",
+                                "borderWidth": "2",
+                                "borderRadius": "12"
+                            },
+                            "errorPinTheme": {
+                                "backgroundColor": "#FFEBEE",
+                                "borderColor": "#F44336",
+                                "borderWidth": "2",
+                                "borderRadius": "12"
+                            }
+                        }
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": 32
+                    },
+                    {
+                        "type": "container",
+                        "decoration": {
+                            "gradient": {
+                                "type": "linear",
+                                "colors": [
+                                    "#561BF3",
+                                    "#0E1980"
+                                ],
+                                "begin": "centerLeft",
+                                "end": "centerRight"
+                            },
+                            "borderRadius": {
+                                "topLeft": 12.0,
+                                "topRight": 12.0,
+                                "bottomLeft": 12.0,
+                                "bottomRight": 12.0
+                            }
+                        },
+                        "height": 48.0,
+                        "width": 10000,
+                        "child": {
+                            "type": "filledButton",
+                            "style": {
+                                "backgroundColor": "transparent"
+                            },
+                            "child": {
+                                "type": "text",
+                                "data": "Confirm Pin",
+                                "style": {
+                                    "color": "#FFFFFF",
+                                    "fontSize": 16,
+                                    "fontWeight": "w600",
+                                    "fontfamily": "Poppins",
+                                    "letterSpacing": 1
+                                }
+                            },
+                            "onPressed": {
+                                "actionType": "validateForm",
+                                "isValid": {
+                                    "actionType": "navigate",
+                                    "assetPath": "assets/json/stac_json/confirm_pin.json",
+                                    "navigationStyle": "push"
+                                },
+                                "isNotValid": {
+                                    "actionType": "showSnackBar",
+                                    "content": {
+                                        "type": "text",
+                                        "data": "Form is not valid"
+                                    },
+                                    "action": {
+                                        "label": "Done",
+                                        "textColor": "#73C2FB",
+                                        "onPressed": {}
+                                    },
+                                    "behavior": "floating"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

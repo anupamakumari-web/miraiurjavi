@@ -299,33 +299,7 @@
                                                 }
                                             },
                                             "onPressed": {
-                                                "actionType": "validateForm",
-                                                "isValid": {
-                                                    "actionType": "showSnackBar",
-                                                    "content": {
-                                                        "type": "text",
-                                                        "data": "Form is valid"
-                                                    },
-                                                    "action": {
-                                                        "label": "Done",
-                                                        "textColor": "#73C2FB",
-                                                        "onPressed": {}
-                                                    },
-                                                    "behavior": "floating"
-                                                },
-                                                "isNotValid": {
-                                                    "actionType": "showSnackBar",
-                                                    "content": {
-                                                        "type": "text",
-                                                        "data": "Form is not valid"
-                                                    },
-                                                    "action": {
-                                                        "label": "Done",
-                                                        "textColor": "#73C2FB",
-                                                        "onPressed": {}
-                                                    },
-                                                    "behavior": "floating"
-                                                }
+                                                "actionType": "submit_form"
                                             }
                                         }
                                     }
