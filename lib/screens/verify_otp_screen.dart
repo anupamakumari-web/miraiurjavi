@@ -55,7 +55,7 @@ class _DynamicFormScreenState extends State<VerifyOtpScreen> {
 
   Future<void> loadJsonFromFirebase() async {
     //for local json
-    /*final layoutStr = await rootBundle.loadString('assets/otp_verify1.json');
+    /*final layoutStr = await rootBundle.loadString('assets/json/json_dynamic_widget/otp_verify1.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
 

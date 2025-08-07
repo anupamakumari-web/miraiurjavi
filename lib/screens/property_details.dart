@@ -28,7 +28,7 @@ class _DynamicFormScreenState extends State<PropertyDetailsScreen> {
   Future<void> _loadJson() async {
     //for local json --working on it
     final layoutStr = await rootBundle.loadString(
-      'assets/property_details.json',
+      'assets/json/json_dynamic_widget/property_details.json',
     );
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);

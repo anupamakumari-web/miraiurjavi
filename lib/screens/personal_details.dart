@@ -60,7 +60,7 @@ class _DynamicFormScreenState extends State<PersonalDetailScreen> {
   Future<void> _loadJson() async {
     //for local json --not uploaded in firebase
     final layoutStr = await rootBundle.loadString(
-      'assets/personal_details.json',
+      'assets/json/json_dynamic_widget/personal_details.json',
     );
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);

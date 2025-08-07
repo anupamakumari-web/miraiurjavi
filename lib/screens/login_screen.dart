@@ -166,7 +166,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<void> loadJsonFromFirebase() async {
     //for local json
-    /*final layoutStr = await rootBundle.loadString('assets/signin.json');
+    /*final layoutStr = await rootBundle.loadString('assets/json/json_dynamic_widget/signin.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
 

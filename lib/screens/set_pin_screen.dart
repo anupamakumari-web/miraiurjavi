@@ -47,7 +47,7 @@ class _DynamicFormScreenState extends State<SetPinScreen> {
 
   Future<void> loadJsonFromFirebase() async {
     //for local json
-    /*final layoutStr = await rootBundle.loadString('assets/set_pin.json');
+    /*final layoutStr = await rootBundle.loadString('assets/json/json_dynamic_widget/set_pin.json');
     final layoutJson = json.decode(layoutStr) as Map<String, dynamic>;
     final data = JsonWidgetData.fromDynamic(layoutJson, registry: registry);
 

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:miraiurjavi_app/custom%20stac%20widget/country_code_picker_parse.dart';
+import 'package:stac/stac.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart'
     show JsonWidgetRegistry, JsonWidgetFunction;
 import 'package:miraiurjavi_app/custom%20builder/circle_avatar_builder.dart';
@@ -19,8 +21,12 @@ import 'test_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await Hive.initFlutter();
-  // final registry = JsonWidgetRegistry.instance;
+  // await Hive.initFlutter();
+  await Stac.initialize(
+    parsers: [
+      CustomCountryPickerParser(),
+    ],
+  );
 
   runApp(const MyApp());
 }
@@ -30,9 +36,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Poppins'),
+      theme: ThemeData(fontFamily: 'Poppins', useMaterial3: true),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: Stac.fromAssets('assets/json/stac_json/signin.json'),
       routes: {
         '/otpVerification': (context) => const VerifyOtpScreen(),
         '/setPin': (context) => const SetPinScreen(),

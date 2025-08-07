@@ -1,0 +1,340 @@
+{
+    "type": "scaffold",
+    "backgroundColor": "#FFFFFF",
+    "body": {
+        "type": "stack",
+        "children": [
+            {
+                "type": "image",
+                "imageType": "asset",
+                "src": "assets/images/mirai-login-background.jpg",
+                "height": 500,
+                "width": 10000,
+                "fit": "cover"
+            },
+            {
+                "type": "align",
+                "alignment": "bottomCenter",
+                "child": {
+                    "type": "form",
+                    "autovalidateMode": "always",
+                    "child": {
+                        "type": "singleChildScrollView",
+                        "child": {
+                            "type": "padding",
+                            "padding": {
+                                "left": 24,
+                                "right": 24,
+                                "top": 40,
+                                "bottom": 40
+                            },
+                            "child": {
+                                "type": "column",
+                                "mainAxisSize": "min",
+                                "children": [
+                                    {
+                                        "type": "image",
+                                        "imageType": "asset",
+                                        "src": "assets/images/Mirai-logo.jpg",
+                                        "width": 60,
+                                        "height": 60
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "height": 16
+                                    },
+                                    {
+                                        "type": "text",
+                                        "data": "Let's Get Started!",
+                                        "style": {
+                                            "fontSize": 30.0,
+                                            "fontWeight": "w600",
+                                            "color": "#2E3849",
+                                            "fontfamily": "Poppins"
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "height": 24
+                                    },
+                                    {
+                                        "type": "align",
+                                        "alignment": "centerStart",
+                                        "child": {
+                                            "type": "text",
+                                            "data": "Enter Mobile Number",
+                                            "style": {
+                                                "fontSize": 14.0,
+                                                "color": "#2E3849",
+                                                "fontWeight": "w400",
+                                                "letterSpacing": 1
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "height": 11
+                                    },
+                                    {
+                                        "type": "row",
+                                        "children": [
+                                            {
+                                                "type": "flexible",
+                                                "flex": 1,
+                                                "child": {
+                                                    "type": "container",
+                                                    "alignment": "center",
+                                                    "padding": {
+                                                        "top": 12.0,
+                                                        "bottom": 12.0,
+                                                        "left": 8.0,
+                                                        "right": 8.0
+                                                    },
+                                                    "decoration": {
+                                                        "color": "#FFFFFF",
+                                                        "borderRadius": {
+                                                            "topLeft": 10.0,
+                                                            "topRight": 10.0,
+                                                            "bottomLeft": 10.0,
+                                                            "bottomRight": 10.0
+                                                        },
+                                                        "border": {
+                                                            "color": "#BABABA",
+                                                            "width": 1
+                                                        }
+                                                    },
+                                                    "child": {
+                                                        "type": "country_picker",
+                                                        "initialCountryCode": "IN",
+                                                        "showPhoneCode": true,
+                                                        "showSearch": true,
+                                                        "onChanged": "country_changed_action",
+                                                        "onCountrySelected": "country_selected_action"
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "type": "sizedBox",
+                                                "width": 10
+                                            },
+                                            {
+                                                "type": "flexible",
+                                                "flex": 2,
+                                                "child": {
+                                                    "type": "textFormField",
+                                                    "id": "mobile",
+                                                    "keyboardType": "phone",
+                                                    "textInputAction": "next",
+                                                    "maxLines": 1,
+                                                    "decoration": {
+                                                        "hintText": "Enter your number",
+                                                        "hintStyle": {
+                                                            "fontSize": 14,
+                                                            "letterSpacing": 1,
+                                                            "fontWeight": "w400",
+                                                            "color": "#757575"
+                                                        },
+                                                        "border": {
+                                                            "type": "outlineInputBorder",
+                                                            "borderRadius": 10,
+                                                            "color": "#BABABA",
+                                                            "width": 1
+                                                        },
+                                                        "enabledBorder": {
+                                                            "type": "outlineInputBorder",
+                                                            "borderRadius": 10,
+                                                            "color": "#BABABA",
+                                                            "width": 1
+                                                        },
+                                                        "focusedBorder": {
+                                                            "type": "outlineInputBorder",
+                                                            "borderRadius": 10,
+                                                            "color": "#BABABA",
+                                                            "width": 1
+                                                        },
+                                                        "errorBorder": {
+                                                            "type": "outlineInputBorder",
+                                                            "borderRadius": 10,
+                                                            "color": "#FF0000",
+                                                            "width": 1
+                                                        }
+                                                    },
+                                                    "validatorRules": [
+                                                        {
+                                                            "rule": "^[0-9]{10}$",
+                                                            "message": "Add a valid phone number"
+                                                        }
+                                                    ],
+                                                    "style": {
+                                                        "fontSize": 14,
+                                                        "color": "#707070",
+                                                        "fontWeight": "w400",
+                                                        "fontFamily": "Poppins"
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "height": 16
+                                    },
+                                    {
+                                        "type": "container",
+                                        "child": {
+                                            "type": "row",
+                                            "mainAxisSize": "min",
+                                            "children": [
+                                                {
+                                                    "type": "checkBox",
+                                                    "id": "checkbox_1",
+                                                    "value": false,
+                                                    "visualDensity": {
+                                                        "horizontal": -4,
+                                                        "vertical": -4
+                                                    },
+                                                    "activeColor": "#561BF3",
+                                                    "side": {
+                                                        "type": "borderSide",
+                                                        "color": "#70777F",
+                                                        "width": 1
+                                                    },
+                                                    "style": {
+                                                        "borderColor": "#BABABA",
+                                                        "borderWidth": 1
+                                                    }
+                                                },
+                                                {
+                                                    "type": "expanded",
+                                                    "child": {
+                                                        "type": "wrap",
+                                                        "children": [
+                                                            {
+                                                                "type": "text",
+                                                                "data": "By signing up, you agree to ",
+                                                                "style": {
+                                                                    "fontSize": 12,
+                                                                    "color": "#70777F",
+                                                                    "fontFamily": "Poppins"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "text",
+                                                                "data": "T&C",
+                                                                "style": {
+                                                                    "fontSize": 12,
+                                                                    "color": "#70777F",
+                                                                    "decoration": "underline",
+                                                                    "decorationColor": "#70777F",
+                                                                    "decorationThickness": 1.5,
+                                                                    "fontFamily": "Poppins"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "text",
+                                                                "data": " and ",
+                                                                "style": {
+                                                                    "fontSize": 12,
+                                                                    "color": "#70777F",
+                                                                    "fontFamily": "Poppins"
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "text",
+                                                                "data": "Privacy Policy",
+                                                                "style": {
+                                                                    "fontSize": 12,
+                                                                    "color": "#70777F",
+                                                                    "decoration": "underline",
+                                                                    "decorationColor": "#70777F",
+                                                                    "decorationThickness": 1.5,
+                                                                    "fontFamily": "Poppins"
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "sizedBox",
+                                        "height": 20
+                                    },
+                                    {
+                                        "type": "container",
+                                        "decoration": {
+                                            "gradient": {
+                                                "type": "linear",
+                                                "colors": [
+                                                    "#561BF3",
+                                                    "#0E1980"
+                                                ],
+                                                "begin": "centerLeft",
+                                                "end": "centerRight"
+                                            },
+                                            "borderRadius": {
+                                                "topLeft": 12.0,
+                                                "topRight": 12.0,
+                                                "bottomLeft": 12.0,
+                                                "bottomRight": 12.0
+                                            }
+                                        },
+                                        "height": 48.0,
+                                        "width": 10000,
+                                        "child": {
+                                            "type": "filledButton",
+                                            "style": {
+                                                "backgroundColor": "transparent"
+                                            },
+                                            "child": {
+                                                "type": "text",
+                                                "data": "Submit",
+                                                "style": {
+                                                    "color": "#FFFFFF",
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "fontfamily": "Poppins",
+                                                    "letterSpacing": 1
+                                                }
+                                            },
+                                            "onPressed": {
+                                                "actionType": "validateForm",
+                                                "isValid": {
+                                                    "actionType": "showSnackBar",
+                                                    "content": {
+                                                        "type": "text",
+                                                        "data": "Form is valid"
+                                                    },
+                                                    "action": {
+                                                        "label": "Done",
+                                                        "textColor": "#73C2FB",
+                                                        "onPressed": {}
+                                                    },
+                                                    "behavior": "floating"
+                                                },
+                                                "isNotValid": {
+                                                    "actionType": "showSnackBar",
+                                                    "content": {
+                                                        "type": "text",
+                                                        "data": "Form is not valid"
+                                                    },
+                                                    "action": {
+                                                        "label": "Done",
+                                                        "textColor": "#73C2FB",
+                                                        "onPressed": {}
+                                                    },
+                                                    "behavior": "floating"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -16,7 +16,7 @@
                                 "type": "asset_image",
                                 "args": {
                                     "fit": "cover",
-                                    "name": "assets/mirai-login-background.jpg"
+                                    "name": "assets/images/mirai-login-background.jpg"
                                 }
                             }
                         }
@@ -48,7 +48,7 @@
                                                                 {
                                                                     "type": "asset_image",
                                                                     "args": {
-                                                                        "name": "assets/Mirai-logo.jpg",
+                                                                        "name": "assets/images/Mirai-logo.jpg",
                                                                         "height": 60
                                                                     }
                                                                 },
@@ -132,7 +132,7 @@
                                                                                                 {
                                                                                                     "type": "asset_image",
                                                                                                     "args": {
-                                                                                                        "name": "assets/india.png",
+                                                                                                        "name": "assets/images/india.png",
                                                                                                         "height": 25
                                                                                                     }
                                                                                                 },
