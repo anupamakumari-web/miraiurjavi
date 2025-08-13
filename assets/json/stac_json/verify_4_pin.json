@@ -126,17 +126,9 @@
                             "onPressed": {
                                 "actionType": "validateForm",
                                 "isValid": {
-                                    "actionType": "showSnackBar",
-                                    "content": {
-                                        "type": "text",
-                                        "data": "Form is valid"
-                                    },
-                                    "action": {
-                                        "label": "Done",
-                                        "textColor": "#73C2FB",
-                                        "onPressed": {}
-                                    },
-                                    "behavior": "floating"
+                                    "actionType": "navigate",
+                                    "assetPath": "assets/json/stac_json/personal_details.json",
+                                    "navigationStyle": "push"
                                 },
                                 "isNotValid": {
                                     "actionType": "showSnackBar",

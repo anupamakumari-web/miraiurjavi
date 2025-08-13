@@ -1,0 +1,139 @@
+{
+  "type": "scaffold",
+  "backgroundColor": "#FFFFFF",
+  "body": {
+    "type": "safeArea",
+    "child": {
+      "type": "singleChildScrollView",
+      "child": {
+        "type": "padding",
+        "padding": {
+          "left": 16,
+          "right": 16,
+          "top": 16,
+          "bottom": 16
+        },
+        "child": {
+          "type": "column",
+          "crossAxisAlignment": "start",
+          "children": [
+            {
+              "type": "text",
+              "data": "Hello",
+              "style": {
+                "fontSize": 16,
+                "fontWeight": "w400",
+                "color": "#70777F"
+              }
+            },
+            {
+              "type": "text",
+              "data": "John Due 👋",
+              "style": {
+                "fontSize": 18,
+                "fontWeight": "w700",
+                "color": "#000000"
+              }
+            },
+            {
+              "type": "sizedBox",
+              "height": 16
+            },
+            {
+              "type": "container",
+              "alignment": "center",
+              "padding": {
+                "top": 16.0,
+                "bottom": 16.0,
+                "left": 16.0,
+                "right": 16.0
+              },
+              "decoration": {
+                "color": "#F5F5F5",
+                "borderRadius": {
+                  "topLeft": 12.0,
+                  "topRight": 12.0,
+                  "bottomLeft": 12.0,
+                  "bottomRight": 12.0
+                }
+              },
+              "child": {
+                "type": "row",
+                "mainAxisAlignment": "spaceBetween",
+                "children": [
+                  {
+                    "type": "column",
+                    "crossAxisAlignment": "start",
+                    "children": [
+                      {
+                        "type": "text",
+                        "data": "Brand name",
+                        "style": {
+                          "fontSize": 12,
+                          "color": "#70777F"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "data": "Urjavidhi",
+                        "style": {
+                          "fontSize": 14,
+                          "fontWeight": "w600"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "dashedCircularProgressBar",
+                    "height": 40,
+                    "width": 40,
+                    "valueNotifier": "progressNotifier",
+                    "progress": 50,
+                    "maxProgress": 100,
+                    "corners": "butt",
+                    "foregroundColor": "FF2196F3",
+                    "backgroundColor": "FFE0E0E0",
+                    "foregroundStrokeWidth": 5,
+                    "backgroundStrokeWidth": 5,
+                    "animation": true,
+                    "child": {
+                      "type": "center",
+                      "child": {
+                        "type": "valueListenableBuilder",
+                        "valueNotifier": "progressNotifier",
+                        "builder": {
+                          "type": "text",
+                          "data": "{value}%",
+                          "style": {
+                            "fontSize": 12,
+                            "fontWeight": "w500"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "sizedBox",
+              "height": 24
+            },
+            {
+              "type": "text",
+              "data": "Follow these steps to make your property live",
+              "style": {
+                "fontSize": 14,
+                "fontWeight": "w500"
+              }
+            },
+            {
+              "type": "sizedBox",
+              "height": 16
+            }
+          ]
+        }
+      }
+    }
+  }
+}

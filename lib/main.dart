@@ -6,8 +6,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:miraiurjavi_app/actions/pinchange_action_parse.dart';
 import 'package:miraiurjavi_app/actions/pincomplete_action_parse.dart';
 import 'package:miraiurjavi_app/actions/signin_submitform_action_parse.dart';
+import 'package:miraiurjavi_app/actions/stepper_action_parse.dart';
 import 'package:miraiurjavi_app/custom%20stac%20widget/country_code_picker_parse.dart';
+import 'package:miraiurjavi_app/custom%20stac%20widget/custom_dropdown_parse.dart';
 import 'package:miraiurjavi_app/custom%20stac%20widget/custom_pinput_parse.dart';
+import 'package:miraiurjavi_app/custom%20stac%20widget/custom_stepper_parse.dart';
+import 'package:miraiurjavi_app/custom%20stac%20widget/custom_value_listenable_builder_parse.dart';
+import 'package:miraiurjavi_app/custom%20stac%20widget/dashed_circular_progress_bar_parse.dart';
 import 'package:stac/stac.dart';
 import 'package:json_dynamic_widget/json_dynamic_widget.dart'
     show JsonWidgetRegistry, JsonWidgetFunction;
@@ -30,11 +35,18 @@ void main() async {
     parsers: [
       CustomCountryPickerParser(),
       CustomPinputParser(),
+      CustomStepperParser(),
+      CustomDropdownParser(),
+      CustomValueListenableBuilderParser({
+        'progressNotifier': ValueNotifier<double>(50),
+      }),
+      CustomDashedCircularProgressBarParser(),
     ],
     actionParsers: [
       PinChangeActionParser(),
       SigninSubmitFormActionParser(),
       PinCompleteActionParser(),
+      // StepperNextActionParser(),
     ],
   );
 
@@ -55,7 +67,7 @@ class MyApp extends StatelessWidget {
         '/confirmPin': (context) => const ConfirmPinScreen(),
         '/verifyPin': (context) => const VerifyPinScreen(),
         '/personal_details': (context) => const PersonalDetailScreen(),
-        '/property_details': (context) => const PropertyDetailsScreen()
+        '/property_details': (context) => const PropertyDetailsScreen(),
       },
     );
   }

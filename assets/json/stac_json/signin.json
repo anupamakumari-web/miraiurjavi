@@ -131,6 +131,8 @@
                                                         "maxLines": 1,
                                                         "decoration": {
                                                             "hintText": "Enter your number",
+                                                            "filled": true,
+                                                            "fillColor": "#FFFFFF",
                                                             "hintStyle": {
                                                                 "fontSize": 14,
                                                                 "letterSpacing": 1,

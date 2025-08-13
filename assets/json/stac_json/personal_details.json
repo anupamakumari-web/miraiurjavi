@@ -1,0 +1,743 @@
+{
+    "type": "scaffold",
+    "backgroundColor": "#FFFFFF",
+    "body": {
+        "type": "stack",
+        "children": [
+            {
+                "type": "padding",
+                "padding": {
+                    "left": 20,
+                    "right": 20,
+                    "top": 32,
+                    "bottom": 95
+                },
+                "child": {
+                    "type": "form",
+                    "autovalidateMode": "always",
+                    "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "children": [
+                            {
+                                "type": "text",
+                                "data": "Welcome to mirai  🎉",
+                                "style": {
+                                    "fontSize": 24,
+                                    "fontWeight": "w700",
+                                    "color": "#2E3849"
+                                }
+                            },
+                            {
+                                "type": "sizedBox",
+                                "height": 8
+                            },
+                            {
+                                "type": "text",
+                                "data": "Please tell us little bit about you",
+                                "style": {
+                                    "fontSize": 14,
+                                    "fontWeight": "w400",
+                                    "color": "#70777F"
+                                }
+                            },
+                            {
+                                "type": "expanded",
+                                "child": {
+                                    "type": "stepper",
+                                    "currentStep": 0,
+                                    "steppertype": "horizontal",
+                                    "margin": {
+                                        "top": 0.0,
+                                        "bottom": 0.0,
+                                        "left": 0.0,
+                                        "right": 0.0
+                                    },
+                                    "steps": [
+                                        {
+                                            "title": {
+                                                "type": "text",
+                                                "data": ""
+                                            },
+                                            "isActive": true,
+                                            "content": {
+                                                "type": "padding",
+                                                "padding": {
+                                                    "left": 0,
+                                                    "right": 0,
+                                                    "top": 0,
+                                                    "bottom": 10
+                                                },
+                                                "child": {
+                                                    "type": "column",
+                                                    "crossAxisAlignment": "start",
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "data": "Personal Details",
+                                                            "style": {
+                                                                "fontSize": 20,
+                                                                "fontWeight": "w700",
+                                                                "color": "#2E3849",
+                                                                "fontfamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Your Name",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "textFormField",
+                                                            "id": "name",
+                                                            "textInputAction": "next",
+                                                            "maxLines": 1,
+                                                            "decoration": {
+                                                                "hintText": "Enter your name",
+                                                                "filled": true,
+                                                                "fillColor": "#FFFFFF",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            },
+                                                            "validatorRules": [
+                                                                {
+                                                                    "rule": "required",
+                                                                    "message": "Name is required"
+                                                                }
+                                                            ],
+                                                            "style": {
+                                                                "fontSize": 14,
+                                                                "color": "#707070",
+                                                                "fontWeight": "w400",
+                                                                "fontFamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Brand Name",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "textFormField",
+                                                            "keyboardType": "text",
+                                                            "id": "brandName",
+                                                            "textInputAction": "next",
+                                                            "maxLines": 1,
+                                                            "decoration": {
+                                                                "hintText": "Enter your brands name",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            },
+                                                            "validatorRules": [
+                                                                {
+                                                                    "rule": "required",
+                                                                    "message": "Brand is required"
+                                                                }
+                                                            ],
+                                                            "style": {
+                                                                "fontSize": 14,
+                                                                "color": "#707070",
+                                                                "fontWeight": "w400",
+                                                                "fontFamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 24
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "data": "Business Size",
+                                                            "style": {
+                                                                "fontSize": 17,
+                                                                "fontWeight": "w600",
+                                                                "color": "#0C1421"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Total Units",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "textFormField",
+                                                            "keyboardType": "phone",
+                                                            "id": "totalUnits",
+                                                            "textInputAction": "next",
+                                                            "maxLines": 1,
+                                                            "decoration": {
+                                                                "hintText": "Enter total units",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            },
+                                                            "validatorRules": [
+                                                                {
+                                                                    "rule": "required",
+                                                                    "message": "Total units is required"
+                                                                }
+                                                            ],
+                                                            "style": {
+                                                                "fontSize": 14,
+                                                                "color": "#707070",
+                                                                "fontWeight": "w400",
+                                                                "fontFamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Total Properties",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "textFormField",
+                                                            "textInputAction": "next",
+                                                            "id": "totalProperties",
+                                                            "maxLines": 1,
+                                                            "decoration": {
+                                                                "hintText": "Enter total properties",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            },
+                                                            "validatorRules": [
+                                                                {
+                                                                    "rule": "required",
+                                                                    "message": "Total properties is required"
+                                                                }
+                                                            ],
+                                                            "style": {
+                                                                "fontSize": 14,
+                                                                "color": "#707070",
+                                                                "fontWeight": "w400",
+                                                                "fontFamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 24
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "data": "Where do you operate?",
+                                                            "style": {
+                                                                "fontSize": 17,
+                                                                "fontWeight": "w600",
+                                                                "color": "#0C1421"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "City",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "dropdownMenu",
+                                                            "width": 10000,
+                                                            "dropdownMenuEntries": [
+                                                                {
+                                                                    "value": "1",
+                                                                    "label": "New York"
+                                                                },
+                                                                {
+                                                                    "value": "2",
+                                                                    "label": "Los Angeles"
+                                                                },
+                                                                {
+                                                                    "value": "3",
+                                                                    "label": "Chicago"
+                                                                }
+                                                            ],
+                                                            "decoration": {
+                                                                "hintText": "Select City",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 24
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "data": "What's your preferred language?",
+                                                            "style": {
+                                                                "fontSize": 17,
+                                                                "fontWeight": "w600",
+                                                                "color": "#0C1421"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Language",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "dropdownMenu",
+                                                            "width": 10000,
+                                                            "dropdownMenuEntries": [
+                                                                {
+                                                                    "value": "1",
+                                                                    "label": "English"
+                                                                },
+                                                                {
+                                                                    "value": "2",
+                                                                    "label": "Spanish"
+                                                                },
+                                                                {
+                                                                    "value": "3",
+                                                                    "label": "French"
+                                                                }
+                                                            ],
+                                                            "decoration": {
+                                                                "hintText": "Select Language",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "title": {
+                                                "type": "text",
+                                                "data": ""
+                                            },
+                                            "isActive": false,
+                                            "content": {
+                                                "type": "padding",
+                                                "padding": {
+                                                    "left": 0,
+                                                    "right": 0,
+                                                    "top": 0,
+                                                    "bottom": 10
+                                                },
+                                                "child": {
+                                                    "type": "column",
+                                                    "crossAxisAlignment": "start",
+                                                    "children": [
+                                                        {
+                                                            "type": "text",
+                                                            "data": "Referral code",
+                                                            "style": {
+                                                                "fontSize": 20,
+                                                                "fontWeight": "w700",
+                                                                "color": "#2E3849",
+                                                                "fontfamily": "Poppins"
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 16
+                                                        },
+                                                        {
+                                                            "type": "align",
+                                                            "alignment": "centerStart",
+                                                            "child": {
+                                                                "type": "text",
+                                                                "data": "Referral code",
+                                                                "style": {
+                                                                    "fontSize": 14,
+                                                                    "color": "#70777F",
+                                                                    "fontWeight": "w400",
+                                                                    "letterSpacing": 1
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "type": "sizedBox",
+                                                            "height": 8
+                                                        },
+                                                        {
+                                                            "type": "textFormField",
+                                                            "id": "referral",
+                                                            "textInputAction": "next",
+                                                            "maxLines": 1,
+                                                            "decoration": {
+                                                                "hintText": "Referral code (optional)",
+                                                                "filled": true,
+                                                                "fillColor": "#FFFFFF",
+                                                                "hintStyle": {
+                                                                    "fontSize": 14,
+                                                                    "letterSpacing": 1,
+                                                                    "fontWeight": "w400",
+                                                                    "color": "#BBBBBB"
+                                                                },
+                                                                "border": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "enabledBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#BBBBBB",
+                                                                    "width": 1
+                                                                },
+                                                                "focusedBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#0038FF",
+                                                                    "width": 1
+                                                                },
+                                                                "errorBorder": {
+                                                                    "type": "outlineInputBorder",
+                                                                    "borderRadius": 8,
+                                                                    "color": "#FF0000",
+                                                                    "width": 1
+                                                                }
+                                                            },
+                                                            "validatorRules": [
+                                                                {
+                                                                    "rule": "required",
+                                                                    "message": "Name is required"
+                                                                }
+                                                            ],
+                                                            "style": {
+                                                                "fontSize": 14,
+                                                                "color": "#707070",
+                                                                "fontWeight": "w400",
+                                                                "fontFamily": "Poppins"
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "type": "align",
+                "alignment": "bottomCenter",
+                "child": {
+                    "type": "padding",
+                    "padding": {
+                        "left": 24,
+                        "right": 24,
+                        "bottom": 40,
+                        "top": 40
+                    },
+                    "child": {
+                        "type": "container",
+                        "decoration": {
+                            "gradient": {
+                                "type": "linear",
+                                "colors": [
+                                    "#561BF3",
+                                    "#0E1980"
+                                ],
+                                "begin": "centerLeft",
+                                "end": "centerRight"
+                            },
+                            "borderRadius": {
+                                "topLeft": 12.0,
+                                "topRight": 12.0,
+                                "bottomLeft": 12.0,
+                                "bottomRight": 12.0
+                            }
+                        },
+                        "height": 48.0,
+                        "width": 10000,
+                        "child": {
+                            "type": "filledButton",
+                            "style": {
+                                "backgroundColor": "transparent"
+                            },
+                            "child": {
+                                "type": "text",
+                                "data": "Continue",
+                                "style": {
+                                    "color": "#FFFFFF",
+                                    "fontSize": 16,
+                                    "fontWeight": "w600",
+                                    "fontfamily": "Poppins",
+                                    "letterSpacing": 1
+                                }
+                            },
+                            "onPressed": {
+                                "actionType": "navigate",
+                                "assetPath": "assets/json/stac_json/property_details.json",
+                                "navigationStyle": "push"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
